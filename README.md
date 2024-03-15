@@ -8,7 +8,7 @@ Usage
 
 1. AGAMA must be downloaded and compiled separately (see http://github.com/GalacticDynamics-Oxford/Agama). Check out the INSTALL file.
 
-2. AGMA should be linked to Arepo as an external library. Arepo currently searches for the library under \$(HOME)/Agama/src and \$(HOME)/Agama/exe/agama.so. 
+2. AGMA should be linked to Arepo as an external library. Arepo currently searches for the library under <span>$<\span>(HOME)/Agama/src and <span>$<\span>(HOME)/Agama/exe/agama.so. 
 If they are elsewhere, the ``AGAMA_INCL`` and ``AGAMA_LIB`` variables in `makefile/modules-lib.make` file should point to [Agamadir]/src where [AgamaDir] is the directory where Agama was installed. See `makefile_extras` for the needed additions to Arepo makefiles.
 In order for the AGAMA to work with the code, ``EXTERNALGRAVITY`` must be on in `Config.sh` as the interface communicates with Arepo via this part of the code.
 When all this is setup you can compile Arepo normally with `make`.
