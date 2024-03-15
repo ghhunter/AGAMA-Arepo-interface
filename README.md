@@ -8,12 +8,14 @@ Usage
 
 1. AGAMA must be downloaded and compiled separately (see http://github.com/GalacticDynamics-Oxford/Agama). Check out the INSTALL file.
 
-2. AGMA should be linked to Arepo as an external library. Arepo currently searches for the library under <span>$</span>(HOME)/Agama/src and <span>$</span>(HOME)/Agama/exe/agama.so. 
+2. Copy the `AGAMA` directory of this repository to the `src` directory of Arepo. Copy the corresponding pieces of code in `add_to_arepo` to their corresponding location as noted in the comment at the top of each file. Addtionally, add ``$(AGAMA_INCL)`` to ``CFLAGS`` and ``$(AGAMA_LIB)`` to ``LIBS`` in the Makefile of Arepo. Additionally copy the contents within `makefile_extras` to their correspondingly named file in Arepo.
+
+3. AGMA should be linked to Arepo as an external library. Arepo currently searches for the library under <span>$</span>(HOME)/Agama/src and <span>$</span>(HOME)/Agama/exe/agama.so. 
 If they are elsewhere, the ``AGAMA_INCL`` and ``AGAMA_LIB`` variables in `makefile/modules-lib.make` file should point to [Agamadir]/src where [AgamaDir] is the directory where Agama was installed. See `makefile_extras` for the needed additions to Arepo makefiles.
 In order for the AGAMA to work with the code, ``EXTERNALGRAVITY`` must be on in `Config.sh` as the interface communicates with Arepo via this part of the code.
 When all this is setup you can compile Arepo normally with `make`.
 
-3. When AGAMA is enabled, it calculates the acceleration of any particle or gas cell at given point due to the galaxy potential provided in a potential.ini file in the same directory as the Arepo exacutable. The acceleration is then added to any exisiting acceleration being experienced by the particle or gas cell.
+4. When AGAMA is enabled, it calculates the acceleration of any particle or gas cell at given point due to the galaxy potential provided in a potential.ini file in the same directory as the Arepo exacutable. The acceleration is then added to any exisiting acceleration being experienced by the particle or gas cell.
 
 The files to generate the potential can be found in the `ini_files` directory which replicates the 2D Milky Way simulation of Hunter et al. submitted.
 
