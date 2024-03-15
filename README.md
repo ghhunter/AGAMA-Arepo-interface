@@ -1,4 +1,3 @@
-
 AGAMA
 =====
 
@@ -47,3 +46,4 @@ If AGAMA is used in a publication, please cite the following:
 Vasiliev E.,2019,MNRAS, 482, 1525. doi:10.1093/mnras/sty2672
 
 and add the link to the AGAMA repository as a footnote: http://github.com/GalacticDynamics-Oxford/Agama
+=======
