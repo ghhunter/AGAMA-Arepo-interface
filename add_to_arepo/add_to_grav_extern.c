@@ -1,4 +1,4 @@
-/* Add the following to grav_external.c in gravity_external() routine
+/* Add the following to grav_external.c in gravity_external_get_force() routine
  * to add AGAMA*/
 
 #ifdef AGAMA
