@@ -2,7 +2,8 @@
 #   see documentation/getting_started.md
 #
 # Add source and header files for new modules below.
-# Add libraries for new modules in makefiles/modules-lib.make.
+# Add libraries for new modules in makefiles/modules-lib.make
+# if using dev version of Arepo.
 
 ifeq (AGAMA, $(findstring AGAMA, $(CONFIGVARS)))
   OBJS    += AGAMA/agama_pot.o
